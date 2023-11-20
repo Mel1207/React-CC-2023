@@ -1,0 +1,51 @@
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #222;
+  background: #e9f3ff;
+  padding: 3rem 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.book-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.book {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.book img {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  height: 400px;
+  object-fit: cover;
+}
+
+.book h4 {
+  font-weight: 400;
+  color: #2e2e2e;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .book-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
