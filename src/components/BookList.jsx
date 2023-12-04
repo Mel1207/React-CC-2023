@@ -4,9 +4,9 @@ export const BookList = () => {
   )
 }
 
-const title = 'The Secret Garden'
-const author = 'Frances Hodgson Burnet'
-const imgSrc = './images/book1.jpg'
+// const title = 'The Secret Garden'
+// const author = 'Frances Hodgson Burnet'
+// const imgSrc = './images/book1.jpg'
 
 const bookOne = {
   author: 'Mel Pualon',
@@ -44,8 +44,19 @@ const BookListComp = () => {
 // }
 
 // ACCESSING PROPS IN SHORTER VERSION -> DESTRUCTURING PROPS
-const Book = (props) => {
-  const {bookImg, bookTitle, bookAuthor} = props
+// const Book = (props) => {
+//   const {bookImg, bookTitle, bookAuthor} = props
+//   return (
+//     <article className="book">
+//       <img src={bookImg} alt={bookTitle} />
+//       <h2>{bookTitle}</h2>
+//       <h4>{bookAuthor}</h4>
+//     </article>
+//   )
+// }
+
+// ACCESSING PROPS INSIDE PARAMETER
+const Book = ({bookImg, bookTitle, bookAuthor}) => {
   return (
     <article className="book">
       <img src={bookImg} alt={bookTitle} />
