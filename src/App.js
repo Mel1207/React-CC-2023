@@ -1,11 +1,11 @@
 // import { NewComp } from "./components/NewComp";
-import { BookList } from "./components/BookList";
+import { BookListObject } from "./components/BookListObject";
 
 function App() {
   return (
     <div className="App">
       {/* <NewComp /> */}
-      <BookList />
+      <BookListObject />
     </div>
   );
 }
