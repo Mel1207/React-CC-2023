@@ -24,7 +24,10 @@ const BookListComp = () => {
   return (
     <div className="container">
       <section className="book-list">
-        <Book bookTitle={bookOne.title} bookAuthor={bookOne.author} bookImg={bookOne.img} />
+        <Book bookTitle={bookOne.title} bookAuthor={bookOne.author} bookImg={bookOne.img}>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, quibusdam!</p>
+          <button>click me</button>
+        </Book>
         <Book bookTitle={bookTwo.title} bookAuthor={bookTwo.author} bookImg={bookTwo.img} />
       </section>
     </div>
@@ -56,12 +59,13 @@ const BookListComp = () => {
 // }
 
 // ACCESSING PROPS INSIDE PARAMETER
-const Book = ({bookImg, bookTitle, bookAuthor}) => {
+const Book = ({bookImg, bookTitle, bookAuthor, children}) => {
   return (
     <article className="book">
       <img src={bookImg} alt={bookTitle} />
       <h2>{bookTitle}</h2>
       <h4>{bookAuthor}</h4>
+      {children}
     </article>
   )
 }
