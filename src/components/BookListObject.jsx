@@ -8,12 +8,14 @@ const books = [
   {
     author: 'Mel Pualon',
     title: 'Learning React 2023',
-    img: './images/book1.jpg'
+    img: './images/book1.jpg',
+    id: 1
   },
   {
     author: 'Mel Pualon',
     title: 'Learning Frontend 2023',
-    img: './images/book2.jpg'
+    img: './images/book2.jpg',
+    id: 2
   }
 ];
 
@@ -33,7 +35,7 @@ const books = [
 //         {books.map(item => {
 
 //           return (
-//             <div className="book">
+//             <div className="book" key={item.id}>
 //               <img src={item.img} alt={item.title} />
 //               <h2>{item.title}</h2>
 //               <p>{item.author}</p>
@@ -50,14 +52,28 @@ const BookList = () => {
   return (
     <section className="book-list"> 
       {books.map(item => {
-        const { img, title, author } = item;
-        return <Book img={img} title={title} author={author}/>
+        // const { img, title, author, id } = item;
+        // FIRST OPTION
+        // return <Book img={img} title={title} author={author} key={id}/>
+
+        // SECOND OPTION
+        // return <Book book={item} key={item.id}/>
+
+        // THIRD OPTION
+        return <Book {...item} key={item.id} />
       })}
     </section>
   )
 }
 
 const Book = (props) => {
+  // FIRST OPTION
+  // const {img, title, author} = props;
+
+  // SECOND OPTION
+  // const { img, title, author } = props.book;
+
+  // THIRD OPTION
   const { img, title, author } = props;
 
   return(
