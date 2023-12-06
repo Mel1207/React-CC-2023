@@ -21,6 +21,7 @@ body {
 .book-list {
   display: grid;
   gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .book {
@@ -40,6 +41,10 @@ body {
   font-weight: 400;
   color: #2e2e2e;
   margin-top: 5px;
+}
+
+input {
+  margin: 1rem 0;
 }
 
 @media screen and (min-width: 768px) {
