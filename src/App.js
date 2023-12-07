@@ -2,7 +2,8 @@
 // import { BookListObject } from "./components/BookListObject";
 // import { Button } from "./components/Events/Button"
 // import { EventLesson2 } from './components/Events/EventLesson2'
-import { PropDrilling } from "./components/Props/PropDrilling";
+// import { PropDrilling } from "./components/Props/PropDrilling";
+import { Es6Modules } from './components/ES6Modules/Es6Modules'
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <BookListObject /> */}
       {/* <Button /> */}
       {/* <EventLesson2 /> */}
-      <PropDrilling />
+      {/* <PropDrilling /> */}
+      <Es6Modules />
     </div>
   );
 }
